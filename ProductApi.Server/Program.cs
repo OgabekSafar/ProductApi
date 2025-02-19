@@ -1,4 +1,7 @@
 
+using Microsoft.Extensions.Configuration;
+using ProductApi.Server.Configurations;
+
 namespace ProductApi.Server
 {
     public class Program
@@ -8,6 +11,7 @@ namespace ProductApi.Server
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.ConfigureDatabase();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
