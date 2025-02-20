@@ -73,9 +73,7 @@ namespace ProductApi.Infrastructure.Migrations
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     DiscountPercentage = table.Column<decimal>(type: "decimal(5,2)", nullable: false),
                     CategoryId = table.Column<long>(type: "bigint", nullable: false),
-                    Category = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     BrandId = table.Column<long>(type: "bigint", nullable: false),
-                    Brand = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },

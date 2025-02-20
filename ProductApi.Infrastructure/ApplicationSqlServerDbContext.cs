@@ -27,5 +27,15 @@ public class ApplicationSqlServerDbContext : DbContext
             .HasOne(cb => cb.Brand)
             .WithMany(b => b.CategoryBrands)
             .HasForeignKey(cb => cb.BrandId);
+
+        modelBuilder.Entity<Product>()
+         .HasOne(p => p.Category)
+         .WithMany(c => c.Products)
+         .HasForeignKey(p => p.CategoryId);
+
+        modelBuilder.Entity<Product>()
+            .HasOne(p => p.Brand)
+            .WithMany(b => b.Products)
+            .HasForeignKey(p => p.BrandId);
     }
 }
